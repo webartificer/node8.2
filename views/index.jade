@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	.container
+		header
+			a(href="/applicants") View Applicants
+		h2 
+			i.fa.fa-file-text-o	&nbsp; Application for Senior Web Developer
+		p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas, veniam est nesciunt, dolore at consequuntur voluptatum cumque placeat doloribus id distinctio veritatis ut impedit doloremque commodi accusantium quasi accusamus.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi perferendis aliquid dolor quos labore vero totam dignissimos recusandae! Officia, eius dolorem ipsum ab beatae provident perferendis consectetur! Pariatur fugit, ratione!
+
+		form#application-form(action="/applicant" method="post")
+			.form-group
+				input.form-control(name="name" type="text" placeholder="Name")
+			.form-group
+				textarea.form-control(name="bio" rows="5" placeholder="Bio")
+			.form-group
+				textarea.form-control(name="skills" rows="3" placeholder="Skills (separated by commas)")
+			.form-group
+				input.form-control(name="years" type="number" placeholder="Years of experience")
+			.form-group
+				textarea.form-control(name="why" rows="5" placeholder="Why do you want to work here?")
+			.form-group
+				input.btn.btn-default.btn-lg(type="submit")

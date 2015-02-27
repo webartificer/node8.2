@@ -1,0 +1,26 @@
+extends layout
+
+block content
+	.container
+		header
+			a(href="./") Add New Applicant
+		h2
+			i.fa.fa-user &nbsp; The Applicants
+		ul#applications.list-unstyled.pad
+		
+			for applicant in applicants
+				li						
+					ul.list-group
+						li.list-group-item.hl Name: 
+							span.appitem #{applicant.name}				
+						li.list-group-item Bio: 
+							span.appitem #{applicant.bio}
+						li.list-group-item Skills: 
+							span.appitem #{applicant.skills}
+						li.list-group-item Years of Experience: 
+							span.appitem #{applicant.years}
+						li.list-group-item Resason for Working Here: 
+							span.appitem #{applicant.why}
+							
+			
+			
