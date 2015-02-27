@@ -17,11 +17,10 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
-
 // Includes Applicant Model
 var Applicant = require('./models/applicant.js');
 
-// displays a list of applicants
+// route to display a list of applicants
 app.get('/applicants', function(req, res){
 	Applicant.find({}, function(err, results){
 		console.log('err:', err);
@@ -35,7 +34,7 @@ app.get('/applicants', function(req, res){
 	});
 });
 
-// creates an applicant
+// route to create an applicant
 app.post('/applicant', function(req, res){
 	// Retreives data from post body and stores it in the database
 	var submittedData = req.body;
